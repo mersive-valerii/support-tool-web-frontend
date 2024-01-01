@@ -136,9 +136,6 @@ export default function PushLicense() {
       const response = await fetch(serverURL, {
         method: "POST",
         body: requestData,
-        headers:{
-                "Content-Type": "application/json"
-        }
       });
 
       const responseBody = await response.json();
