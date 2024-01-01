@@ -116,7 +116,8 @@ export default function PushLicense() {
       return
     }
 
-    const serverURL = "http://localhost:3000/upload";
+    // const serverURL = "http://127.0.0.1:5000";
+    const serverURL = "https://flask-mersive-server.onrender.com/";
 
     if (!file) {
       // Handle the case where no file is selected
@@ -134,14 +135,17 @@ export default function PushLicense() {
 
       const response = await fetch(serverURL, {
         method: "POST",
-        body: requestData
+        body: requestData,
+        headers:{
+                "Content-Type": "application/json"
+        }
       });
 
       const responseBody = await response.json();
       console.log(responseBody);
 
       // Response from server meaning that IP is wrong or Pod is anreachable
-      if (responseBody.message === 'timeout of 5000ms exceeded') {
+      if (responseBody.message === 'can not connect') {
         handleDeviceIPError(false, true, false, "Cannot connect to the Pod! Please make sure your computer can reach Pod, and the device IP address is correct")
         handleDevicePasswordError(true, false, false, "")
         handleDevicePathdError(true, false, false, "")
@@ -164,7 +168,10 @@ export default function PushLicense() {
 
       //Error means that command was successfully sent to the Pod and Pod is restarted.
       if (responseBody.message === "socket hangs up") {
-        handelLicenseUploadSuccess()
+        console.log(responseBody)
+        setLoading(false)
+        return
+        // handelLicenseUploadSuccess()
       }
 
       setLoading(false)
