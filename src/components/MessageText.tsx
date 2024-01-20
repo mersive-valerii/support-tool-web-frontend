@@ -7,6 +7,8 @@ export default function MessageText({
     success: boolean;
     hide: boolean;
   }) {
-    return <p className={`error-text success-${success} hide-${hide}`}>{text}</p>;
+    return <div className="message-contatiner">
+      <p className={`error-text success-${success} hide-${hide}`}>{text}</p>
+      </div>
   }
   
