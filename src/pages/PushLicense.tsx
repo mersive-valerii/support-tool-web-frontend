@@ -37,7 +37,7 @@ export default function PushLicense() {
 
   const [loading, setLoading] = useState(false);
 
-  const { selectedFile, setFile } = useLicenseContext();
+  const { selectedFile } = useLicenseContext();
 
   useEffect(() => {
     // Update pathToLicenseInput when selectedFile changes
@@ -83,15 +83,15 @@ export default function PushLicense() {
     setMessageIpTextValue(text);
   }
 
-  const handelLicenseUploadSuccess = () => {
-    setDeviceIPInput("")
-    setDevicePasswordInput("")
-    setPathToLicenseInput("")
-    setInputFile(undefined)
-    handleDeviceIPError(true, false, false, "")
-    handleDevicePathdError(true, false, false, "")
-    handleDevicePasswordError(true, false, false, "Pod with is restarting and the license file is succesfully applied")
-  }
+  // const handelLicenseUploadSuccess = () => {
+  //   setDeviceIPInput("")
+  //   setDevicePasswordInput("")
+  //   setPathToLicenseInput("")
+  //   setInputFile(undefined)
+  //   handleDeviceIPError(true, false, false, "")
+  //   handleDevicePathdError(true, false, false, "")
+  //   handleDevicePasswordError(true, false, false, "Pod with is restarting and the license file is succesfully applied")
+  // }
 
   const handlePushClick = async () => {
 
