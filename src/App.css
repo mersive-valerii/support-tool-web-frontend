@@ -4,10 +4,9 @@
   /* padding: 2rem; */
   text-align: center;
   height: 100vh;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: #fff;
 }
-
-
 
 *,
 *:focus,
@@ -16,9 +15,8 @@
 }
 
 p {
-  font-size: 18px;
+  font-size: 12px;
   color: rgb(84, 82, 82);
-  font-weight: 500;
 }
 
 .logo {
@@ -26,19 +24,20 @@ p {
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-
 }
 
 .header-container p {
-  font-size: 20px;
+  font-size: 14px;
+  color: rgb(84, 82, 82);
+  font-size: medium;
 }
-.header-container{
+.header-container {
   margin-bottom: 2px;
   max-width: 900px;
 }
 
-p {
-  font-size: 16px;
+.header-container h6 {
+  font-size: 18px;
 }
 
 .main-container {
@@ -53,14 +52,17 @@ p {
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 550px;
+  width: 550px;
+}
+
+.card-text {
+  max-width: 800px;
 }
 
 h2 {
   font-size: 30px;
   color: #333;
 }
-
 
 button {
   border: none;
@@ -152,7 +154,6 @@ button:hover {
   color: #a1403e;
 }
 
-
 /* input{
   padding: 0.8rem 1rem;
   margin-bottom: 1rem;
@@ -202,12 +203,23 @@ input::placeholder {
   color: rgb(88, 87, 87);
 }
 
-
 input:focus {
   border: 1px solid rgb(38, 37, 37);
 }
 
-.message-contatiner{
+.info-p{ color: #fff }
+
+.info-p h6{
+  color: #fff;
+  font-size: medium;
+  margin: 0.5rem 0rem;
+}
+
+.info-p p{
+  color: #fff;
+}
+
+.message-contatiner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,9 +249,6 @@ input:focus {
   font-weight: 700;
 }
 
-
-
-
 @media screen and (max-width: 800px) {
   .main-container {
     flex-direction: column;
@@ -249,7 +258,6 @@ input:focus {
     width: 300px;
   }
 }
-
 
 .card {
   padding: 2em;
