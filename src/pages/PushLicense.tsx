@@ -117,7 +117,10 @@ export default function PushLicense() {
     }
 
     // const serverURL = "http://127.0.0.1:5000";
-    const serverURL = "https://flask-mersive-server.onrender.com/";
+    // const serverURL = "http://127.0.0.1:8080/upload";
+    // const serverURL = "https://flask-mersive-server.onrender.com/";
+    const serverURL = "https://flask-proxy-server-wpqwl7c7fa-ew.a.run.app/";
+
 
     if (!file) {
       // Handle the case where no file is selected

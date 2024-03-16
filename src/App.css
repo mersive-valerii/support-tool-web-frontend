@@ -20,16 +20,25 @@ p {
 }
 
 .logo {
+  display: block;
+  margin: 0 auto;
   height: 8rem;
   padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.header-container p {
+.long-text{
+  margin-top: 1rem;
+}
+
+/* .header-container p {
   font-size: 14px;
   color: rgb(84, 82, 82);
   font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header-container {
   margin-bottom: 2px;
@@ -38,7 +47,7 @@ p {
 
 .header-container h6 {
   font-size: 18px;
-}
+} */
 
 .main-container {
   display: flex;
@@ -232,11 +241,11 @@ input:focus {
 }
 
 .hide-true {
-  display: none;
+  visibility: hidden;
 }
 
 .hide-false {
-  display: block;
+  visibility: visible;
 }
 
 .success-true {
